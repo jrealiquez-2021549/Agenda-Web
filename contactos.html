@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contactos | Agenda Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/contactos.css">
+    <link rel="icon" href="image/icon.png" type="image/png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-title">Agenda Web</div>
+
+        <div class="profile">
+            <img src="image/profile.png" alt="Perfil" id="profileBtn">
+
+            <div class="profile-menu" id="profileMenu">
+                <p><strong>Correo:</strong><br> jrealiquez@email.com</p>
+                <p><strong>Contraseña:</strong><br> 2021549</p>
+                <button onclick="location.href='#'">
+                    Ajustes de cuenta
+                </button>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="wrapper large">
+            <h2>Lista de Contactos</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Teléfono</th>
+                        <th>Correo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="location.href='contacto.html'">
+                        <td>Rodolfo Mejía</td>
+                        <td>3110-0319</td>
+                        <td>rmejía@email.com</td>
+                    </tr>
+                    <tr onclick="location.href='contacto.html'">
+                        <td>Iverson Pérez</td>
+                        <td>4233-1234</td>
+                        <td>ipérez@email.com</td>
+                    </tr>
+                    <tr onclick="location.href='contacto.html'">
+                        <td>María López</td>
+                        <td>4548-5678</td>
+                        <td>mlópez@email.com</td>
+                    </tr>
+                    <tr onclick="location.href='contacto.html'">
+                        <td>Adrián Rafael</td>
+                        <td>2010-9012</td>
+                        <td>arafael@email.com</td>
+                    </tr>
+                    <tr onclick="location.href='contacto.html'">
+                        <td>Wendy Noriega</td>
+                        <td>0517-1233</td>
+                        <td>wnoriega@email.com</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button onclick="location.href='image/agregar_contacto.png'">
+                Agregar nuevo contacto
+            </button>
+        </div>
+    </main>
+    <footer>
+        <p>© 2026 Agenda Web | Proyecto Lab. 1</p>
+    </footer>
+    <script>
+        const profileBtn = document.getElementById("profileBtn");
+        const profileMenu = document.getElementById("profileMenu");
+
+        profileBtn.addEventListener("click", () => {
+            profileMenu.style.display =
+                profileMenu.style.display === "block" ? "none" : "block";
+        });
+
+        // Cerrar menú si se hace click fuera
+        document.addEventListener("click", (e) => {
+            if (!profileBtn.contains(e.target) && !profileMenu.contains(e.target)) {
+                profileMenu.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
