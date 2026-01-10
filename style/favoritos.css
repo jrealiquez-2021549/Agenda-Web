@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../image/background_4.jpg") center/cover no-repeat;
+    z-index: -1;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 36px;
+    background: #1f1f1f;
+    color: white;
+}
+
+.nav-center {
+    display: flex;
+    gap: 32px; /* ⬅ espacio para crecer */
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding-bottom: 4px;
+    transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+    opacity: 0.75;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid white;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.profile {
+    position: relative;
+}
+
+.profile img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #fff;
+    object-fit: cover;
+}
+
+.profile-menu {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 220px;
+    padding: 15px;
+    background: #2b2b2b; /* sólido */
+    border-radius: 8px;
+    display: none;
+    color: #fff;
+    z-index: 100;
+}
+
+.profile-menu p {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.profile-menu button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.profile-menu button:hover {
+    background: #ddd;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.wrapper {
+    border-radius: 8px;
+    padding: 30px;
+    border: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(8px);
+    color: #fff;
+}
+
+.wrapper.large {
+    width: 90%;
+    max-width: 1000px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+th {
+    background: rgba(255,255,255,0.15);
+}
+
+tbody tr {
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+tbody tr:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+button {
+    width: 100%;
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button:hover {
+    background: rgba(255,255,255,0.85);
+}
+
+footer {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1f1f1f;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.profile:hover .profile-menu {
+    display: block;
+}
+
+.fav-cell {
+    width: 70px;
+    text-align: center;
+}
+
+.heart {
+    font-size: 32px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.6);
+    transition: transform 0.2s ease, color 0.2s ease;
+    user-select: none;
+}
+
+.heart:hover {
+    transform: scale(1.2);
+}
+
+.heart.active {
+    color: #ffffff;
+}
+
+th.fav-col,
+td.fav-cell {
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    text-align: center;
+}
+
+td.fav-cell {
+    padding: 0;
+}
