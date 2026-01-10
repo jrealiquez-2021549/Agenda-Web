@@ -51,6 +51,10 @@
             </aside>
 
             <section class="contact-info">
+                
+                <span class="heart fav-detail active"
+                    onclick="toggleHeart(event, this)">♡</span>
+
                 <h3>Detalle del Contacto</h3>
 
                 <p>
@@ -90,6 +94,18 @@
         document.addEventListener("click", () => {
             profileMenu.style.display = "none";
         });
+
+        function toggleHeart(event, heart) {
+            event.stopPropagation();
+
+            if (heart.classList.contains("active")) {
+                heart.classList.remove("active");
+                heart.textContent = "♡";
+            } else {
+                heart.classList.add("active");
+                heart.textContent = "♥";
+            }
+        }
     </script>
 </body>
 </html>

@@ -423,3 +423,39 @@ footer {
 .profile:hover .profile-menu {
     display: block;
 }
+
+/* Contenedor debe ser relativo */
+.contact-info {
+    position: relative;
+    padding: 30px;
+    border-radius: 8px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.4);
+    color: #fff;
+}
+
+/* Corazón reutilizado */
+.heart {
+    font-size: 28px;
+    cursor: pointer;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Activo */
+.heart.active {
+    color: white;
+}
+
+/* Hover */
+.heart:hover {
+    transform: scale(1.15);
+}
+
+/* Posición específica para detalle */
+.fav-detail {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+}
