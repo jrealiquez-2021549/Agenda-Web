@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cuenta de Usuario | Agenda Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/perfil_usuario.css">
+    <link rel="icon" href="image/icon.png" type="image/png">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <h1 class="logo">Agenda Web</h1>
+        </div>
+
+        <nav class="nav-center">
+            <a href="contactos.html" class="nav-link">Inicio</a>
+            <a href="favoritos.html" class="nav-link">Favoritos</a>
+            <a href="pendientes.html" class="nav-link">Pendientes</a>
+        </nav>
+
+        <div class="profile">
+            <img src="image/profile.png" alt="Perfil" id="profileBtn">
+            <div class="profile-menu" id="profileMenu">
+                <p><strong>Correo:</strong><br> jrealiquez@email.com</p>
+                <p><strong>Contraseña:</strong><br> 2021549</p>
+                <button onclick="location.href='perfil_usuario.html'">
+                    Ajustes de cuenta
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="account-layout">
+
+            <!-- PANEL IZQUIERDO -->
+            <aside class="account-profile">
+                <div class="avatar">
+                    <img src="image/profile.png" alt="Usuario">
+                    <span class="edit-avatar">✎</span>
+                </div>
+
+                <h3>jrealiquez-2021549</h3>
+                <p class="email">jrealiquez-2021549@kinal.edu.gt</p>
+
+                <hr>
+
+                <a href="#" class="account-link">¿Por qué no puedo editar?</a>
+
+                <div class="logout">
+                    <a href="#">Cerrar todas las sesiones</a>
+                </div>
+            </aside>
+
+            <!-- PANEL DERECHO -->
+            <section class="account-options">
+
+                <div class="option-card">
+                    <div class="icon">👤</div>
+                    <h4>Información de seguridad</h4>
+                    <p>
+                        Mantenga actualizados los métodos de comprobación
+                        y la información de seguridad.
+                    </p>
+                    <a href="#">ACTUALIZAR INFORMACIÓN ›</a>
+                </div>
+
+                <div class="option-card">
+                    <div class="icon">🔑</div>
+                    <h4>Cambiar contraseña</h4>
+                    <p>
+                        Haga que su contraseña sea más segura
+                        o cámbiela si otra persona la conoce.
+                    </p>
+                    <a href="#">CAMBIAR CONTRASEÑA ›</a>
+                </div>
+
+                <div class="option-card">
+                    <div class="icon">⚙️</div>
+                    <h4>Configuración y privacidad</h4>
+                    <p>
+                        Personalice la configuración de su cuenta
+                        y vea cómo se usan sus datos.
+                    </p>
+                    <a href="#">VER CONFIGURACIÓN Y PRIVACIDAD ›</a>
+                </div>
+
+                <div class="option-card">
+                    <div class="icon">💻</div>
+                    <h4>Dispositivos</h4>
+                    <p>
+                        Deshabilite un dispositivo perdido y revise
+                        los dispositivos conectados.
+                    </p>
+                    <a href="#">ADMINISTRAR DISPOSITIVOS ›</a>
+                </div>
+
+                <div class="option-card">
+                    <div class="icon">💼</div>
+                    <h4>Organizaciones</h4>
+                    <p>
+                        Vea todas las organizaciones
+                        de las que forma parte.
+                    </p>
+                    <a href="#">ADMINISTRAR ORGANIZACIONES ›</a>
+                </div>
+
+                <div class="option-card">
+                    <div class="icon">🔐</div>
+                    <h4>Mis inicios de sesión</h4>
+                    <p>
+                        Revise cuándo y dónde ha iniciado sesión
+                        y detecte actividad sospechosa.
+                    </p>
+                    <a href="#">REVISAR ACTIVIDAD RECIENTE ›</a>
+                </div>
+
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Agenda Web | Proyecto Lab. 1</p>
+    </footer>
+
+    <script>
+        const profileBtn = document.getElementById("profileBtn");
+        const profileMenu = document.getElementById("profileMenu");
+
+        profileBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            profileMenu.style.display =
+                profileMenu.style.display === "block" ? "none" : "block";
+        });
+
+        document.addEventListener("click", () => {
+            profileMenu.style.display = "none";
+        });
+    </script>
+</body>
+</html>
