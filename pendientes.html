@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendientes - Agenda Web</title>
+    <link rel="stylesheet" href="style/pendientes.css">
+    <link rel="stylesheet" href="style/contactos.css">
+    <link rel="icon" href="image/icon.png" type="image/png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Agenda Web</div>
+        <div class="nav-center">
+            <a href="contactos.html" class="nav-link">Inicio</a>
+            <a href="favoritos.html" class="nav-link">Favoritos</a>
+            <a href="pendientes.html" class="nav-link active">Pendientes</a>
+        </div>
+        <div class="profile">
+            <img src="image/profile.png" alt="Perfil" id="profileBtn">
+
+            <div class="profile-menu" id="profileMenu">
+                <p><strong>Correo:</strong><br> jrealiquez@email.com</p>
+                <p><strong>Contraseña:</strong><br> 2021549</p>
+                <button onclick="location.href='perfil_usuario.html'">
+                    Ajustes de cuenta
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="wrapper">
+            <h2>Gestión de Tareas Pendientes</h2>
+
+            <div class="form-section">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="taskName">Nombre de la Tarea:</label>
+                        <input type="text" id="taskName" placeholder="Ingrese el nombre de la tarea">
+                    </div>
+                    <div class="form-group">
+                        <label for="taskPriority">Prioridad:</label>
+                        <select id="taskPriority">
+                            <option value="">Seleccione una prioridad</option>
+                            <option value="Alta">Alta</option>
+                            <option value="Media">Media</option>
+                            <option value="Baja">Baja</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="taskDescription">Descripción:</label>
+                        <textarea id="taskDescription" placeholder="Ingrese la descripción de la tarea"></textarea>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button id="btnAdd">Agregar Tarea</button>
+                    <button id="btnModify" disabled>Modificar Tarea</button>
+                    <button id="btnDelete" disabled>Eliminar Tarea</button>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <label for="filterPriority">Filtrar por prioridad:</label>
+                <select id="filterPriority">
+                    <option value="todos">Todas las tareas</option>
+                    <option value="alta-baja">Alta → Baja</option>
+                    <option value="baja-alta">Baja → Alta</option>
+                </select>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Nombre</th>
+                        <th style="width: 15%;">Prioridad</th>
+                        <th style="width: 60%;">Descripción</th>
+                    </tr>
+                </thead>
+                <tbody id="taskTableBody">
+                    <tr class="empty-state">
+                        <td colspan="3">No hay tareas pendientes. ¡Agrega una nueva tarea!</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Agenda Web | Proyecto Lab. 1</p>
+    </footer>
+    <script src="script/pendientes.js"></script>
+</body>
+</html>
