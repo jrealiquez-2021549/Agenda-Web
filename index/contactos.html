@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Contactos | Agenda Web</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/favoritos.css">
-    <link rel="icon" href="image/icon.png" type="image/png">
+    <link rel="stylesheet" href="../style/contactos.css">
+    <link rel="icon" href="../image/icon.png" type="image/png">
 </head>
 <body>
     <header class="navbar">
@@ -14,13 +14,13 @@
         </div>
 
         <nav class="nav-center">
-            <a href="contactos.html" class="nav-link">Inicio</a>
-            <a href="favoritos.html" class="nav-link active">Favoritos</a>
+            <a href="contactos.html" class="nav-link active">Inicio</a>
+            <a href="favoritos.html" class="nav-link">Favoritos</a>
             <a href="pendientes.html" class="nav-link">Pendientes</a>
         </nav>
 
         <div class="profile">
-            <img src="image/profile.png" alt="Perfil" id="profileBtn">
+            <img src="../image/profile.png" alt="Perfil" id="profileBtn">
 
             <div class="profile-menu" id="profileMenu">
                 <p><strong>Correo:</strong><br> jrealiquez@email.com</p>
@@ -33,7 +33,7 @@
     </header>
     <main>
         <div class="wrapper large">
-            <h2>Lista de Favoritos</h2>
+            <h2>Lista de Contactos</h2>
 
             <table>
                 <thead>
@@ -45,12 +45,36 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <tr onclick="location.href='detalle_contacto_1.html'">
+                        <td>Rodolfo Mejía</td>
+                        <td>3110-0319</td>
+                        <td>rmejía@email.com</td>
+                        <td class="fav-cell">
+                            <span class="heart" onclick="toggleHeart(event, this)">♡</span>
+                        </td>
+                    </tr>
+                    <tr onclick="location.href='detalle_contacto_2.html'">
+                        <td>Iverson Pérez</td>
+                        <td>4233-1234</td>
+                        <td>ipérez@email.com</td>
+                        <td class="fav-cell">
+                            <span class="heart" onclick="toggleHeart(event, this)">♡</span>
+                        </td>
+                    </tr>
                     <tr onclick="location.href='detalle_contacto_3.html'">
                         <td>María López</td>
                         <td>4548-5678</td>
                         <td>mlópez@email.com</td>
                         <td class="fav-cell">
                             <span class="heart active" onclick="toggleHeart(event, this)">♥</span>
+                        </td>
+                    </tr>
+                    <tr onclick="location.href='detalle_contacto_4.html'">
+                        <td>Adrián Rafael</td>
+                        <td>2010-9012</td>
+                        <td>arafael@email.com</td>
+                        <td class="fav-cell">
+                            <span class="heart" onclick="toggleHeart(event, this)">♡</span>
                         </td>
                     </tr>
                     <tr onclick="location.href='detalle_contacto_5.html'">
@@ -64,8 +88,8 @@
                 </tbody>
             </table>
 
-            <button onclick="location.href='contactos.html'">
-                Agregar nuevo favorito
+            <button onclick="location.href='agregar_contacto.html'">
+                Agregar nuevo contacto
             </button>
         </div>
     </main>
